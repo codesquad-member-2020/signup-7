@@ -15,8 +15,8 @@
 		C2C1D4E62429BE3B0062BA4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C1D4E42429BE3B0062BA4E /* LaunchScreen.storyboard */; };
 		C2C1D4F12429BE3B0062BA4E /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4F02429BE3B0062BA4E /* SignUpTests.swift */; };
 		C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */; };
-		C2C1D5002429FDEC0062BA4E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4FF2429FDEC0062BA4E /* TextField.swift */; };
 		C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */; };
+		C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D503242A4AAC0062BA4E /* FormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,8 @@
 		C2C1D4F02429BE3B0062BA4E /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		C2C1D4F22429BE3B0062BA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		C2C1D4FF2429FDEC0062BA4E /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C2C1D503242A4AAC0062BA4E /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		C2C1D4FE2429FDBD0062BA4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C2C1D4FF2429FDEC0062BA4E /* TextField.swift */,
+				C2C1D503242A4AAC0062BA4E /* FormTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */,
+				C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */,
 				C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */,
 				C2C1D4DA2429BE370062BA4E /* AppDelegate.swift in Sources */,
-				C2C1D5002429FDEC0062BA4E /* TextField.swift in Sources */,
 				C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */,
 				C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */,
 			);
