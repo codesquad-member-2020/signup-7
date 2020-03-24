@@ -1,6 +1,12 @@
 # signup-7
 회원가입 프로젝트 - 7팀
 
+## 팀원
+
+BE: Alex, XP  
+FE: Lime  
+iOS: 하이디
+
 ## 팀 규칙
 
 [Github Wiki][team-rule]
