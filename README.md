@@ -3,27 +3,21 @@
 
 ## 팀원
 
-**BE**: Alex, XP  
-**FE**: Lime  
-**iOS**: 하이디
+* **BE**: [Alex][alex], [XP][xp]
+* **FE**: [Lime][lime]
+* **iOS**: [하이디][heidi]
 
 ## 팀 규칙
 
-[Github Wiki][team-rule]
+* [Github Wiki][team-rule]
 
-## iOS 개발 내용
+## 기능 목록
 
-[바로가기][ios-dev]
-
-## FE 개발 내용
-
-[바로가기][fe-dev]
-
-## BE 개발 내용
-
-[바로가기][be-dev]
+* [백로그 스프레드시트 바로가기][back-log]
 
 [team-rule]: https://github.com/codesquad-memeber-2020/signup-7/wiki/회원가입-프로젝트-7팀-규칙
-[ios-dev]: https://github.com/codesquad-memeber-2020/signup-7/wiki/iOS-개발-진행상황
-[fe-dev]: https://github.com/codesquad-memeber-2020/signup-7/wiki/FE-개발-진행상황
-[be-dev]: https://github.com/codesquad-memeber-2020/signup-7/wiki/BE-개발-진행상황
+[back-log]: https://docs.google.com/spreadsheets/d/1qgEsXx7XXVdkvARkJqb0Xp3JoZOicDKNYmEdYa8XVQI/edit#gid=1386834576
+[alex]: https://github.com/haveagood
+[xp]: https://github.com/cocojen
+[lime]: https://github.com/Lime-Lee
+[heidi]: https://github.com/seizze
