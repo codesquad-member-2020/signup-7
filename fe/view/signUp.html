@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../style/reset.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>회원가입</h1>
+        </div>
+        <form action="#" method="POST" accept-charset="UTF-8">
+            <div class="content">
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <span class="form-input">
+                        <input type="text" id="id" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="password">비밀번호</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="password" id="password" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="password_check">비밀번호 재확인</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="password" id="password_check" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="name">이름</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="text" id="name" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <span id="birth">생년월일</span>
+                    </h3>
+                    <div class="bir_wrap">
+                        <div class="bir_yy">
+                            <span class="form-box">
+                                <input type="text" id="year" placeholder="년(4자)" aria-label="year" />
+                            </span>
+                        </div>
+                        <div class="bir_mm">
+                            <span class="form-box">
+                                <select id="month" aria-label="month">
+                                    <option>월</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="bir_dd">
+                            <span class="form-box">
+                                <input type="text" id="day" placeholder="일" aria-label="day" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="gender">성별</label>
+                    </h3>
+                    <span class="form-box">
+                        <select id="gender">
+                            <option>성별</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="email">이메일</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="text" id="email" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="phone">휴대전화</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="tel" id="phone" placeholder="- 없이 입력해주세요. 예) 01012341234" />
+                    </span>
+                </div>
+                <div class="form-row">
+                    <h3 class="form-title">
+                        <label for="interest">관심사</label>
+                    </h3>
+                    <span class="form-box">
+                        <input type="test" id="interest" />
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
