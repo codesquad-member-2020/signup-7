@@ -16,19 +16,10 @@ class TextStyle {
         case detail = 12
     }
     
-    enum Color: String {
-        case black = "black"
-        case placeholderGray = "textGray"
-        case interestsWhite = "white"
-        case invalidRed = "invalidRed"
-        case suggestionGreen = "pointGreen"
-    }
-    
     let size: Int
     let color: UIColor
     
-    init?(size: Size, color: Color) {
-        guard let color = UIColor(named: color.rawValue) else { return nil }
+    init?(size: Size, color: UIColor) {
         self.size = size.rawValue
         self.color = color
     }
