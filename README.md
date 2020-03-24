@@ -3,9 +3,9 @@
 
 ## 팀원
 
-BE: Alex, XP  
-FE: Lime  
-iOS: 하이디
+**BE**: Alex, XP  
+**FE**: Lime  
+**iOS**: 하이디
 
 ## 팀 규칙
 
