@@ -1,6 +1,7 @@
 package com.example.group7;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -33,11 +34,23 @@ public class UserRepository {
     }
 
     public User findByUserId(String userId) {
-        return jdbcTemplate.queryForObject("select * from user where userId=?", new Object[] {
-                        userId
-                },
-                new BeanPropertyRowMapper< User >(User.class));
+
+        String sql = "SELECT * FROM USER WHERE USERID = ?";
+            User foundUser = (User)jdbcTemplate.queryForObject(sql, new Object[]{userId}, new BeanPropertyRowMapper(User.class));
+            return foundUser;
     }
+
+    /// 회원 아이디 존재 여부
+    public boolean isUserExists(String userId) {
+        String sql = "SELECT count(*) FROM USER WHERE USERID = ?";
+        boolean result = false;
+        int count = jdbcTemplate.queryForObject(sql, new Object[] { userId }, Integer.class);
+        if (count > 0) {
+            result = true;
+        }
+        return result;
+    }
+
 //
 //    //회원 삭
 //    public int deleteById(long id) {
