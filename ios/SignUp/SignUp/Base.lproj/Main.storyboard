@@ -821,14 +821,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcr-mf-oSw" customClass="FormButton" customModule="SignUp" customModuleProvider="target">
-                                <rect key="frame" x="140.66666666666666" y="331" width="93.666666666666657" height="44"/>
+                                <rect key="frame" x="145" y="331" width="85" height="44"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4fL-o0-KcQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" name="PointGreen"/>
-                                <state key="normal" title=" 다음" image="chevron.right.circle.fill" catalog="system">
+                                <state key="normal" title="로그인">
                                     <color key="titleColor" name="PointGreen"/>
                                 </state>
                                 <state key="disabled">
