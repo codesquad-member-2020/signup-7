@@ -19,17 +19,23 @@ class FormTextField: UITextField {
     
     @IBInspectable var inset: CGFloat = 0
     
-    var appearance: Appearance {
+    @IBInspectable var borderColor: UIColor? {
+        didSet { layer.borderColor = borderColor?.cgColor }
+    }
+
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet { layer.borderWidth = borderWidth }
+    }
+    
+    var appearance: Appearance = .normal {
         didSet { setAppearance(to: appearance) }
     }
     
     override init(frame: CGRect) {
-        appearance = .normal
         super.init(frame: frame)
     }
     
     required init?(coder: NSCoder) {
-        appearance = .normal
         super.init(coder: coder)
     }
     
@@ -45,7 +51,7 @@ class FormTextField: UITextField {
         return bounds.inset(by: UIEdgeInsets(with: inset))
     }
     
-    func setAppearance(to appearance: Appearance) {
+    private func setAppearance(to appearance: Appearance) {
         switch appearance {
         case .normal: layer.borderColor = UIColor.borderGray.cgColor
         case .focused: layer.borderColor = UIColor.selectedBlue.cgColor
