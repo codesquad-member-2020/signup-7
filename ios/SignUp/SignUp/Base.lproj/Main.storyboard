@@ -187,20 +187,36 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqd-Xa-aWN">
-                                <rect key="frame" x="145" y="507" width="85" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqd-Xa-aWN" customClass="FormButton" customModule="SignUp" customModuleProvider="target">
+                                <rect key="frame" x="140.66666666666666" y="507" width="93.666666666666657" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="caU-jz-Yrm"/>
-                                    <constraint firstAttribute="width" constant="85" id="gSr-m5-TBt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" name="PointGreen"/>
-                                <state key="normal" title="다음" image="chevron.right.circle.fill" catalog="system">
+                                <state key="normal" title=" 다음" image="chevron.right.circle.fill" catalog="system">
                                     <color key="titleColor" name="PointGreen"/>
                                 </state>
                                 <state key="disabled">
                                     <color key="titleColor" name="textGray"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="borderGray"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="contentInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96082693340000003" green="0.96465140579999997" blue="0.96862870450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
