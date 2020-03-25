@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class UserController {
 
@@ -18,11 +20,6 @@ public class UserController {
         userRepository.insert(user);
         System.out.println("user trying to register : " + user);
         return "redirect:/login";
-    }
-
-    @GetMapping("/login")
-    public String login() {
-        return "login";
     }
 
 }

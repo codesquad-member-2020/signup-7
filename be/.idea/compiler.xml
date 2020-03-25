@@ -11,5 +11,9 @@
         <module name="group7.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend.main" target="1.8" />
+      <module name="backend.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

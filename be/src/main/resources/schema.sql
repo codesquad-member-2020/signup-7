@@ -13,8 +13,3 @@ create table user
     dateOfBirth varchar(128) not null,
     primary key(id)
 );
-
-create table cafe (
-    name varchar(32) not null
-
-)
