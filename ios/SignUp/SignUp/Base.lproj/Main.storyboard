@@ -229,6 +229,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jFp-U5-DsB" kind="show" id="17L-Ml-4Tt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96082693340000003" green="0.96465140579999997" blue="0.96862870450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -499,6 +502,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="jRV-Sw-Y1I" kind="show" id="vDO-sA-2Et"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -674,6 +680,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="3DQ-5F-AUf" kind="show" id="0Hm-Hu-9g4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
