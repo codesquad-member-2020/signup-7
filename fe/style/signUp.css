@@ -124,6 +124,12 @@ select::-ms-expand {
     background-size: 20px 20px;
 }
 
+#agree:checked {
+    background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/m_chcek_on_s_20.png) 0% 0% no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+}
+
 .form-agree > label {
     cursor: pointer;
 }
