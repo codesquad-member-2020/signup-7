@@ -1,0 +1,59 @@
+템플릿
+
+<div class="container" id="main">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default content-main">
+
+            <form action="/api/validate/id" method="GET">
+
+                 <div class="form-group">
+                    <label for="userId">id </label>
+                    <input class="form-control" id="userId" name="userId" placeholder="User ID">
+                </div>
+                <button type="submit">Click me</button>
+            </form>
+
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input class="form-control" id="password" name="password" placeholder="User ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input class="form-control" id="name" name="name" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">sex</label>
+                    <input class="form-control" id="sex" name="sex" placeholder="gender">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">phoneNumber</label>
+                    <input class="form-control" id="phoneNumber" name="phoneNumber" placeholder="phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">interest</label>
+                    <input class="form-control" id="interest" name="interest" placeholder="interest">
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">date of birth</label>
+                    <input class="form-control" id="date of birth" name="dateOfBirth" placeholder="date of birth">
+                </div>
+
+            <form name="question" method="post" action="/api/register">
+
+
+            <button type="submit" class="btn btn-success clearfix pull-right">register</button>
+                <div class="clearfix" />
+            </form>
+        </div>
+    </div>
+</div>
