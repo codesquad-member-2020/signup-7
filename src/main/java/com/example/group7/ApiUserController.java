@@ -15,8 +15,20 @@ public class ApiUserController {
     ///회원가입
     @PostMapping("/register")
     public ResponseEntity<ApiResponseMessage> createUser(User user) {
-        userRepository.insert(user);
-        return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, user), HttpStatus.OK);
+
+        ///아이디 중복 체크
+        if (userRepository.isUserExists(user.getUserId())) {
+            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "ID ALREADY IN USE"), HttpStatus.BAD_REQUEST);
+        }
+
+        if (userRepository.isNumberExists(user.getPhoneNumber())) {
+            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "PHONE NUMBER ALREADY IN USE"), HttpStatus.BAD_REQUEST);
+        }
+
+        if (userRepository.isEmailExists(user.getEmail())) {
+            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "EMAIL ALREADY IN USE"), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "REGISTERED SUCCESSFULLY"), HttpStatus.OK);
     }
 
     ///아이디 중복검사
@@ -53,17 +65,5 @@ public class ApiUserController {
         return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "EMAIL ALREADY IN USE"), HttpStatus.BAD_REQUEST);
     }
 
-
-    @PostMapping("/validate/id/{userId}")
-    public ResponseEntity<ApiResponseMessage> checkId(@PathVariable String userId) {
-
-        System.out.println("user id " + userId);
-        if (!userRepository.isUserExists(userId)) {
-            System.out.println("user id : " + userId);
-            System.out.println(userRepository.isUserExists(userId));
-            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "ID AVAILABLE"), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "ID ALREADY IN USE"), HttpStatus.BAD_REQUEST);
-    }
 
 }
