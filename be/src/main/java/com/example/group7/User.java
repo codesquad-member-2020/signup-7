@@ -1,5 +1,6 @@
 package com.example.group7;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,19 +8,28 @@ import lombok.ToString;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 
+
 @Getter @Setter @ToString
 public class User {
 
     @Id
     private Long id;
 
+    @JsonProperty
     private String userId;
+    @JsonProperty
     private String password;
+    @JsonProperty
     private String name;
+    @JsonProperty
     private String sex;
+    @JsonProperty
     private String email;
+    @JsonProperty
     private String phoneNumber;
+    @JsonProperty
     private String interest;
+    @JsonProperty
     private String dateOfBirth;
 
     public User() {
