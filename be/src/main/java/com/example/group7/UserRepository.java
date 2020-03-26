@@ -1,12 +1,9 @@
 package com.example.group7;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class UserRepository {
@@ -15,55 +12,50 @@ public class UserRepository {
 
     ///회원 추가
     public int insert(User user) {
-        return jdbcTemplate.update("insert into user (userId, name, password, sex, email, phoneNumber, interest, dateOfBirth) " + "values(?, ?, ?, ?, ?, ?, ?, ?)",
-                new Object[] {
-                        user.getUserId(), user.getName(), user.getPassword(), user.getSex(), user.getEmail(), user.getPhoneNumber(), user.getInterest(),user.getDateOfBirth()
+        return jdbcTemplate.update("insert into user (userId, name, password, gender, email, phoneNumber, interest, year, month, date) " + "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                new Object[]{
+                        user.getUserId(), user.getName(), user.getPassword(), user.getGender(), user.getEmail(), user.getPhoneNumber(), user.getInterest(), user.getYear(), user.getMonth(), user.getDate()
                 });
     }
 
-//
-//    public List< User > findAll() {
-//        return jdbcTemplate.query("select * from user", new UserRowMapper());
-//    }
-//
-    public User findById(long id) {
-        return jdbcTemplate.queryForObject("select * from user where id=?", new Object[] {
-                        id
-                },
-                new BeanPropertyRowMapper< User >(User.class));
-    }
-
+    ///유저 이름으로 유저 찾기
     public User findByUserId(String userId) {
 
         String sql = "SELECT * FROM USER WHERE USERID = ?";
-            User foundUser = (User)jdbcTemplate.queryForObject(sql, new Object[]{userId}, new BeanPropertyRowMapper(User.class));
-            return foundUser;
+        User foundUser = (User) jdbcTemplate.queryForObject(sql, new Object[]{userId}, new BeanPropertyRowMapper(User.class));
+        return foundUser;
     }
 
-    /// 회원 아이디 존재 여부
+    /// 회원 아이디 존재 여부 검사
     public boolean isUserExists(String userId) {
         String sql = "SELECT count(*) FROM USER WHERE USERID = ?";
         boolean result = false;
-        int count = jdbcTemplate.queryForObject(sql, new Object[] { userId }, Integer.class);
+        int count = jdbcTemplate.queryForObject(sql, new Object[]{userId}, Integer.class);
         if (count > 0) {
             result = true;
         }
         return result;
     }
 
-//
-//    //회원 삭
-//    public int deleteById(long id) {
-//        return jdbcTemplate.update("delete from user where id=?", new Object[] {
-//                id
-//        });
-//    }
-//
-//
-//    public int update(User user) {
-//        return jdbcTemplate.update("update student " + " set name = ?, passport_number = ? " + " where id = ?",
-//                new Object[] {
-//                        student.getName(), student.getPassportNumber(), student.getId()
-//                });
-//    }
+    ///핸드폰 번호 존재 여부 검사
+    public boolean isNumberExists(String phoneNumber) {
+        String sql = "SELECT count(*) FROM USER WHERE PHONENUMBER = ?";
+        boolean result = false;
+        int count = jdbcTemplate.queryForObject(sql, new Object[]{phoneNumber}, Integer.class);
+        if (count > 0) {
+            result = true;
+        }
+        return result;
+    }
+
+    ///이메일 존재 여부 검사
+    public boolean isEmailExists(String email) {
+        String sql = "SELECT count(*) FROM USER WHERE EMAIL = ?";
+        boolean result = false;
+        int count = jdbcTemplate.queryForObject(sql, new Object[]{email}, Integer.class);
+        if (count > 0) {
+            result = true;
+        }
+        return result;
+    }
 }

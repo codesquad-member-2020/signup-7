@@ -9,24 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
-    @Autowired
-    UserRepository userRepository;
-
-    ///회원가입
-    @PostMapping("/register")
-    public String register(User user) {
-        userRepository.insert(user);
-        System.out.println("user trying to register : " + user);
-        return "redirect:/login";
-    }
-
+    ///로그인
     @GetMapping("/login")
     public String login() {
         return "login";
     }
 
 }
-
-
-//    int result = jdbcTemplate.queryForObject(
-//            "SELECT COUNT(*) FROM EMPLOYEE", Integer.class);

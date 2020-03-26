@@ -6,15 +6,13 @@ create table user
     userId varchar(32) not null,
     name varchar(32) not null,
     password varchar(32) not null,
-    sex varchar(32) not null,
+    gender varchar(32) not null,
     email varchar(128) not null,
     phoneNumber varchar(128) not null,
     interest varchar(128) not null,
-    dateOfBirth varchar(128) not null,
+    year varchar(128) not null,
+    month varchar(128) not null,
+    date varchar(128) not null,
     primary key(id)
 );
 
-create table cafe (
-    name varchar(32) not null
-
-)
