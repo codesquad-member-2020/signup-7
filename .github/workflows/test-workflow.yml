@@ -25,7 +25,7 @@ jobs:
       env:
         HEROKU_API_TOKEN: ${{secrets.<API_KEY>}}
         HEROKU_APP_NAME: "<APP-NAME>"
-        run : git subtree push --prefix be https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master
+      run : git subtree push --prefix be https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
