@@ -24,6 +24,9 @@ public class ApiUserController {
         }
         return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "REGISTERED SUCCESSFULLY",200), HttpStatus.OK);
     }
+
+
+    
     ///아이디 중복검사
     @CrossOrigin
     @GetMapping("/validate/id")
