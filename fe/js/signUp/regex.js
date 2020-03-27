@@ -1,8 +1,8 @@
 import { $ } from "../common/util.js";
-import { REGEX_PATTERN, REGEX_CLASS, REGEX_MESSAGE } from "./regexUtil.js";
+import { TARGET, REGEX_PATTERN, REGEX_CLASS, REGEX_MESSAGE } from "./regexUtil.js";
 
 // 이벤트
-export function eventHandler() {
+export function allEventListener() {
     $('#id').addEventListener("blur", idRegexCheck);
     $('#password').addEventListener("blur", passwordRegex);
     $('#password_check').addEventListener("blur", passwordRecheck);
@@ -11,10 +11,11 @@ export function eventHandler() {
 
 // 아이디 유효성 검사
 function idRegexCheck(event) {
-    const target = $('#id-message');
+    const target = TARGET.userId;
+    const userId = event.target.value;
     const idRegex = new RegExp(REGEX_PATTERN.userId);
-    if (idRegex.test(event.target.value)) {
-        idDuplicationCheck(target, event.target.value);
+    if (idRegex.test(userId)) {
+        idDuplicationCheck(target, userId);
     } else {
         target.className = REGEX_CLASS.error;
         target.innerText = REGEX_MESSAGE.userId.error;
@@ -28,6 +29,10 @@ async function idDuplicationCheck(target, userId) {
     };
     const response = await fetch(`https://heroku-test-signup.herokuapp.com/validate/id?userId=${userId}`, options);
     const result = await response.json();
+    idDuplicationResult(target, result);
+}
+
+function idDuplicationResult(target, result) {
     if (result.status === "OK") {
         target.className = REGEX_CLASS.success;
         target.innerText = REGEX_MESSAGE.userId.duplication.success;
@@ -51,7 +56,7 @@ function passwordRegex(event) {
 
 // 비밀번호 유효성 검사
 function passwordRegexCheck(options) {
-    const target = $('#password-message');
+    const target = TARGET.password;
     target.className = REGEX_CLASS.error;
     if (!options.lengthRegex.test(options.password)) {
         target.innerText = REGEX_MESSAGE.password.error.length;
@@ -71,29 +76,26 @@ function passwordRegexCheck(options) {
 function passwordRecheck(event) {
     const password = $('#password').value;
     const passwordCheck = event.target.value;
-    const target = $('#password-check-message');
+    const target = TARGET.passwordCheck;
     if (password === passwordCheck) {
         target.className = REGEX_CLASS.success;
-        target.innerText = REGEX_MESSAGE.password_check.success;
+        target.innerText = REGEX_MESSAGE.passwordCheck.success;
     } else {
         target.className = REGEX_CLASS.error;
-        target.innerText = REGEX_MESSAGE.password_check.error;
+        target.innerText = REGEX_MESSAGE.passwordCheck.error;
     }
 }
 
-// 생년월일: 월 유효성 검사
-function yearCheck() {
-    const today = new Data();
-    console.log(today);
-
+// 생년월일: 년 유효성 검사
+function yearCheck(event) {
+    const userYear = event.target.value;
+    const thisYear = new Date().getFullYear();
+    const age = (thisYear - userYear) + 1;
+    const target = TARGET.birth;
+    if (!(age >= 15 && age <= 99)) {
+        target.className = REGEX_CLASS.error;
+        target.innerText = REGEX_MESSAGE.birth.error.year;
+    } else {
+        target.innerText = "";
+    }
 }
-
-// function isChild(birthDate) {
-//     var today = new Date();
-//     var yyyy = today.getFullYear();
-//     var mm = today.getMonth() < 9 ? "0" + (today.getMonth() + 1) : (today.getMonth() + 1); // getMonth()
-//     var dd = today.getDate() < 10 ? "0" + today.getDate() : today.getDate();
-
-//     return parseInt(yyyy + mm + dd) - parseInt(birthDate) - 140000 < 0;
-// }
-

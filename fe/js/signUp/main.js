@@ -1,3 +1,3 @@
-import { eventHandler } from "./regex.js";
+import { allEventListener } from "./regex.js";
 
-eventHandler();
+allEventListener();

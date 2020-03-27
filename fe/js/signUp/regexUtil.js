@@ -1,3 +1,13 @@
+import { $ } from "../common/util.js";
+
+// 타겟
+export const TARGET = {
+    userId: $('#id-message'),
+    password: $('#password-message'),
+    passwordCheck: $('#password-check-message'),
+    birth: $('#birth-message')
+}
+
 // 정규식 패턴
 export const REGEX_PATTERN = {
     userId: /^[a-z0-9-_]{5,20}$/,
@@ -6,12 +16,10 @@ export const REGEX_PATTERN = {
         upper: /^(?=.*[A-Z])/,
         number: /^(?=.*[0-9])/,
         symbol: /^(?=.*[!@#$%^*+=-])/
-    },
-    // email: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i,
-    // mobile: /^010\d{3,4}\d{4}$/g
-};
+    }
+}
 
-// html에서 메시지가 들어가는 span 태그의 class 이름
+// 메시지가 들어가는 태그의 클래스 이름
 export const REGEX_CLASS = {
     success: 'success',
     error: 'error'
@@ -35,23 +43,13 @@ export const REGEX_MESSAGE = {
             symbol: '특수문자를 최소 1자 이상 포함해주세요.'
         }
     },
-    password_check: {
+    passwordCheck: {
         success: '비밀번호가 일치합니다.',
         error: '비밀번호가 일치하지 않습니다.'
     },
-    birthYY: {
-        errorMsg: '년도를 입력해주세요'
-    },
-    birthDD: {
-        errorMsg: '태어난 날짜를 정확히 입력해주세요.'
-    },
-    email: {
-        errorMsg: '이메일 주소를 다시 확인해주세요.',
-    },
-    mobile: {
-        errorMsg: '형식에 맞지 않는 번호입니다.',
-    },
-    interest: {
-        errorMsg: '3개 이상의 관심사를 입력하세요.',
+    birth: {
+        error: {
+            year: '태어난 년도 4자리를 정확하게 입력하세요.'
+        }
     }
-};
+}
