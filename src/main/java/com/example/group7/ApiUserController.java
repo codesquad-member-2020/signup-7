@@ -26,7 +26,7 @@ public class ApiUserController {
     }
     ///아이디 중복검사
     @CrossOrigin
-    @GetMapping("/validate/id")
+    @PostMapping("/validate/id")
     public ResponseEntity<ApiResponseMessage> isValidateId(@RequestBody HashMap<String, String> map) {
         String userId = map.get("userId");
         if (!userRepository.isUserExists(userId)) {
@@ -36,7 +36,7 @@ public class ApiUserController {
     }
     ///핸드폰 번호 중복검사
     @CrossOrigin
-    @GetMapping("/validate/phoneNumber")
+    @PostMapping("/validate/phoneNumber")
     public ResponseEntity<ApiResponseMessage> isValidateNumber(@RequestBody HashMap<String, String> map) {
         String phoneNumber = map.get("phoneNumber");
         if (!userRepository.isNumberExists(phoneNumber)) {
@@ -46,7 +46,7 @@ public class ApiUserController {
     }
     ///이메일 중복검사
     @CrossOrigin
-    @GetMapping("/validate/email")
+    @PostMapping("/validate/email")
     public ResponseEntity<ApiResponseMessage> isValidateEmail(@RequestBody HashMap<String, String> map) {
         String email = map.get("email");
         if (!userRepository.isEmailExists(email)) {
