@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
 @RestController
 public class ApiUserController {
     @Autowired
@@ -26,10 +27,9 @@ public class ApiUserController {
     ///아이디 중복검사
     @CrossOrigin
     @GetMapping("/validate/id")
-    public ResponseEntity<ApiResponseMessage> isValidateId(@RequestBody String userId) {
+    public ResponseEntity<ApiResponseMessage> isValidateId(@RequestBody HashMap<String, String> map) {
+        String userId = map.get("userId");
         if (!userRepository.isUserExists(userId)) {
-            System.out.println("user id : " + userId);
-            System.out.println(userRepository.isUserExists(userId));
             return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "ID AVAILABLE",200), HttpStatus.OK);
         }
         return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "ID ALREADY IN USE",404), HttpStatus.BAD_REQUEST);
@@ -37,9 +37,9 @@ public class ApiUserController {
     ///핸드폰 번호 중복검사
     @CrossOrigin
     @GetMapping("/validate/phoneNumber")
-    public ResponseEntity<ApiResponseMessage> isValidateNumber(@RequestBody String phoneNumber) {
+    public ResponseEntity<ApiResponseMessage> isValidateNumber(@RequestBody HashMap<String, String> map) {
+        String phoneNumber = map.get("phoneNumber");
         if (!userRepository.isNumberExists(phoneNumber)) {
-            System.out.println("phone number : " + phoneNumber);
             return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "PHONE NUMBER AVAILABLE",200), HttpStatus.OK);
         }
         return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "PHONE NUMBER ALREADY IN USE",404), HttpStatus.BAD_REQUEST);
@@ -47,9 +47,9 @@ public class ApiUserController {
     ///이메일 중복검사
     @CrossOrigin
     @GetMapping("/validate/email")
-    public ResponseEntity<ApiResponseMessage> isValidateEmail(@RequestBody String email) {
+    public ResponseEntity<ApiResponseMessage> isValidateEmail(@RequestBody HashMap<String, String> map) {
+        String email = map.get("email");
         if (!userRepository.isEmailExists(email)) {
-            System.out.println("user email : " + email);
             return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, "EMAIL AVAILABLE",200), HttpStatus.OK);
         }
         return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "EMAIL ALREADY IN USE",404), HttpStatus.BAD_REQUEST);
