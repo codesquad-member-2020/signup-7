@@ -1,4 +1,4 @@
-# SignUp iOS 개발 진행 상황
+# SignUp iOS
 
 ## 사용자 인터페이스 구현
 
@@ -7,5 +7,5 @@
 
 **실행 결과**
 
-![result1](result1.png)
+![signup-7-ios](signup-7-ios.gif)
 
