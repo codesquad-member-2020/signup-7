@@ -23,9 +23,9 @@ jobs:
     - uses: actions/checkout@v2
     - name : Build and push
       env:
-        HEROKU_API_TOKEN: ${{secrets.<API_TOKEN>}}
-        HEROKU_APP_NAME: "<APP-NAME>"
-      run : git subtree push --prefix be https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master
+        HEROKU_API_TOKEN: ${{secrets.d51ee372-e1b3-46fd-909f-8a0fabf562d2}}
+        HEROKU_APP_NAME: "signup-7"
+      run : git subtree push --prefix be https://heroku:$HEROKU_d51ee372-e1b3-46fd-909f-8a0fabf562d2@git.heroku.com/$HEROKU_signup-7.git master
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
