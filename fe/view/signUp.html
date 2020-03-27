@@ -14,7 +14,7 @@
                 <h1>회원가입</h1>
             </div>
             <div class="content">
-                <form action="#" method="POST" accept-charset="UTF-8">
+                <form action="/register" method="POST" accept-charset="UTF-8">
                     <div class="form-row">
                         <h3 class="form-title">
                             <label for="id">아이디</label>
@@ -22,6 +22,7 @@
                         <span class="form-input">
                             <input type="text" id="id" />
                         </span>
+                        <span id="id-message"></span>
                     </div>
                     <div class="form-row">
                         <h3 class="form-title">
@@ -30,6 +31,7 @@
                         <span class="form-box">
                             <input type="password" id="password" />
                         </span>
+                        <span id="password-message"></span>
                     </div>
                     <div class="form-row">
                         <h3 class="form-title">
@@ -38,6 +40,7 @@
                         <span class="form-box">
                             <input type="password" id="password_check" />
                         </span>
+                        <span id="password-check-message"></span>
                     </div>
                     <div class="form-row">
                         <h3 class="form-title">
@@ -54,7 +57,7 @@
                         <div class="birth-wrap">
                             <div class="birth-year">
                                 <span class="form-box">
-                                    <input type="text" id="year" placeholder="년(4자)" aria-label="year" />
+                                    <input type="text" id="year" placeholder="년(4자)" aria-label="year" maxlength="4" />
                                 </span>
                             </div>
                             <div class="birth-month">
@@ -82,6 +85,7 @@
                                 </span>
                             </div>
                         </div>
+                        <span id="birth-message"></span>
                     </div>
                     <div class="form-row">
                         <h3 class="form-title">
@@ -105,10 +109,10 @@
                     </div>
                     <div class="form-row">
                         <h3 class="form-title">
-                            <label for="phone">휴대전화</label>
+                            <label for="phoneNumber">휴대전화</label>
                         </h3>
                         <span class="form-box">
-                            <input type="tel" id="phone" placeholder="- 없이 입력해주세요. 예) 01012341234" />
+                            <input type="tel" id="phoneNumber" placeholder="- 없이 입력해주세요. 예) 01012341234" />
                         </span>
                     </div>
                     <div class="form-row">
@@ -147,6 +151,7 @@
             </div>
         </div>
     </div>
+    <script type="module" src="../js/signUp/main.js"></script>
 </body>
 
 </html>

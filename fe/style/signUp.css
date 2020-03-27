@@ -156,3 +156,19 @@ select::-ms-expand {
 .btn-submit {
     margin-left: 10px;
 }
+
+.success {
+    display: block;
+    margin: 9px 0 -2px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #08a600;
+}
+
+.error {
+    display: block;
+    margin: 9px 0 -2px;
+    font-size: 12px;
+    line-height: 14px;
+    color: red;
+}
