@@ -13,23 +13,13 @@ public class User {
     @Id
     private Long id;
 
-    @JsonProperty
     private String userId;
-    @JsonProperty
     private String password;
-    @JsonProperty
     private String name;
-    @JsonProperty
     private String gender;
-    @JsonProperty
     private String email;
-    @JsonProperty
     private String phoneNumber;
-    @JsonProperty
     private String interest;
-//    @JsonProperty
-//    private String dateOfBirth;
-
     private String year;
     private String month;
     private String date;
