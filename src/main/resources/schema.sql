@@ -16,3 +16,5 @@ create table user
     primary key(id)
 );
 
+DELETE FROM CAFE;
+

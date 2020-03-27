@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Group7Application {
 
     public static void main(String[] args) {
-        System.out.println();
+
         SpringApplication.run(Group7Application.class, args);
     }
 
