@@ -12,7 +12,7 @@ class Endpoints {
     static let baseURL = "https://heroku-test-signup.herokuapp.com"
     static let validationRequestURL = "\(baseURL)/validate"
     
-    static let idValidationRequestURL = "\(validationRequestURL)/available"
-    static let mobileValidationRequestURL = "\(validationRequestURL)/available"
-    static let emailValidationRequestURL = "\(validationRequestURL)/subscription"
+    static let idValidationRequestURL = "\(validationRequestURL)/id"
+    static let mobileValidationRequestURL = "\(validationRequestURL)/phoneNumber"
+    static let emailValidationRequestURL = "\(validationRequestURL)/email"
 }
