@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C2338460242B2CA800B38258 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233845F242B2CA800B38258 /* FormButton.swift */; };
+		C2338462242C895F00B38258 /* IDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338461242C895F00B38258 /* IDTextField.swift */; };
+		C2338466242C8D4400B38258 /* FormTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338465242C8D4400B38258 /* FormTextFieldDelegate.swift */; };
+		C233846A242C9C0200B38258 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338469242C9C0200B38258 /* FormViewModel.swift */; };
+		C233846D242C9CF200B38258 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233846C242C9CF200B38258 /* UserInformation.swift */; };
+		C233846F242CAC8200B38258 /* UpdateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233846E242CAC8200B38258 /* UpdateEvent.swift */; };
+		C2338471242F447800B38258 /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338470242F447800B38258 /* Observers.swift */; };
+		C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338472242F457B00B38258 /* NotificationExtension.swift */; };
 		C2C1D4DA2429BE370062BA4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4D92429BE370062BA4E /* AppDelegate.swift */; };
 		C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */; };
 		C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4DD2429BE370062BA4E /* ViewController.swift */; };
@@ -32,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		C233845F242B2CA800B38258 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
+		C2338461242C895F00B38258 /* IDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextField.swift; sourceTree = "<group>"; };
+		C2338465242C8D4400B38258 /* FormTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldDelegate.swift; sourceTree = "<group>"; };
+		C2338469242C9C0200B38258 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		C233846C242C9CF200B38258 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		C233846E242CAC8200B38258 /* UpdateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEvent.swift; sourceTree = "<group>"; };
+		C2338470242F447800B38258 /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
+		C2338472242F457B00B38258 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		C2C1D4D62429BE370062BA4E /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C1D4D92429BE370062BA4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2338464242C8D1B00B38258 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C2338465242C8D4400B38258 /* FormTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C2338467242C97E900B38258 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C1D4DD2429BE370062BA4E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C2338468242C9BE300B38258 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C2338469242C9C0200B38258 /* FormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C233846B242C9CDA00B38258 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C233846C242C9CF200B38258 /* UserInformation.swift */,
+				C2338470242F447800B38258 /* Observers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C2C1D4CD2429BE370062BA4E = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +136,12 @@
 			children = (
 				C2C1D4FB2429F3C40062BA4E /* Utils */,
 				C2C1D4FE2429FDBD0062BA4E /* Views */,
+				C2338464242C8D1B00B38258 /* Delegates */,
+				C2338467242C97E900B38258 /* Controllers */,
+				C2338468242C9BE300B38258 /* ViewModels */,
+				C233846B242C9CDA00B38258 /* Models */,
 				C2C1D4D92429BE370062BA4E /* AppDelegate.swift */,
 				C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */,
-				C2C1D4DD2429BE370062BA4E /* ViewController.swift */,
 				C2C1D4DF2429BE370062BA4E /* Main.storyboard */,
 				C2C1D4E22429BE3B0062BA4E /* Assets.xcassets */,
 				C2C1D4E42429BE3B0062BA4E /* LaunchScreen.storyboard */,
@@ -114,6 +164,8 @@
 			children = (
 				C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */,
 				C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */,
+				C233846E242CAC8200B38258 /* UpdateEvent.swift */,
+				C2338472242F457B00B38258 /* NotificationExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -123,6 +175,7 @@
 			children = (
 				C2C1D503242A4AAC0062BA4E /* FormTextField.swift */,
 				C233845F242B2CA800B38258 /* FormButton.swift */,
+				C2338461242C895F00B38258 /* IDTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,12 +281,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C233846A242C9C0200B38258 /* FormViewModel.swift in Sources */,
+				C233846F242CAC8200B38258 /* UpdateEvent.swift in Sources */,
 				C2338460242B2CA800B38258 /* FormButton.swift in Sources */,
 				C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */,
 				C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */,
+				C2338462242C895F00B38258 /* IDTextField.swift in Sources */,
+				C233846D242C9CF200B38258 /* UserInformation.swift in Sources */,
 				C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */,
+				C2338466242C8D4400B38258 /* FormTextFieldDelegate.swift in Sources */,
 				C2C1D4DA2429BE370062BA4E /* AppDelegate.swift in Sources */,
 				C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */,
+				C2338471242F447800B38258 /* Observers.swift in Sources */,
+				C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */,
 				C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
