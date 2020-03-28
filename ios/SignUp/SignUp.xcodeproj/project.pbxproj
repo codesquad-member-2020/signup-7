@@ -27,7 +27,6 @@
 		C2C1D4E32429BE3B0062BA4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C1D4E22429BE3B0062BA4E /* Assets.xcassets */; };
 		C2C1D4E62429BE3B0062BA4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C1D4E42429BE3B0062BA4E /* LaunchScreen.storyboard */; };
 		C2C1D4F12429BE3B0062BA4E /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4F02429BE3B0062BA4E /* SignUpTests.swift */; };
-		C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */; };
 		C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */; };
 		C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D503242A4AAC0062BA4E /* FormTextField.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		C2C1D4EC2429BE3B0062BA4E /* SignUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C1D4F02429BE3B0062BA4E /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		C2C1D4F22429BE3B0062BA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C2C1D503242A4AAC0062BA4E /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +182,6 @@
 		C2C1D4FB2429F3C40062BA4E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C2C1D4FC2429F3D60062BA4E /* TextStyle.swift */,
 				C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */,
 				C233846E242CAC8200B38258 /* UpdateEvent.swift */,
 				C2338472242F457B00B38258 /* NotificationExtension.swift */,
@@ -309,7 +306,6 @@
 				C233847F242F75DE00B38258 /* APIRouter.swift in Sources */,
 				C2338481242F76C200B38258 /* Networking.swift in Sources */,
 				C2338460242B2CA800B38258 /* FormButton.swift in Sources */,
-				C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */,
 				C2338475242F591C00B38258 /* FieldStackView.swift in Sources */,
 				C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */,
 				C2338489242F98C400B38258 /* ValidationResponse.swift in Sources */,
