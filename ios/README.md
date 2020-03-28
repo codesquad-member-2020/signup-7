@@ -1,5 +1,7 @@
 # SignUp iOS
 
+![signup-ios](signup-ios.gif)
+
 ## 단계별 구현 내용
 
 ### 사용자 인터페이스 구현
