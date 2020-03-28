@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     private func addViewUpdatingObservers() {
-        observers.addObserver(forName: UpdateEvent.idValidationResultDidUpdate) { [weak self] in
+        observers.addObserver(forName: .idValidationResultDidUpdate) { [weak self] in
             guard let idEvent = $0 as? UpdateEvent else { return }
             if case let .id(result: result) = idEvent {
                 switch result {

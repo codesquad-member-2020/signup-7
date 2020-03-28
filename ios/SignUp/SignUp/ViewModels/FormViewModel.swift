@@ -15,18 +15,25 @@ final class FormViewModel {
     func validate(_ input: String) {
         if isNotConformingIDRule(input) {
             UpdateEvent.id(result: .invalid(.invalidRule)).post()
-        } else if isExistingID(input) {
-            UpdateEvent.id(result: .invalid(.alreadyExisting)).post()
-        } else {
-            UpdateEvent.id(result: .valid(.success)).post()
+            return
         }
+        
+        idDuplicationCheck(input) { UpdateEvent.id(result: $0).post() }
     }
     
     private func isNotConformingIDRule(_ id: String) -> Bool {
-        return true
+        return false
     }
     
-    private func isExistingID(_ id: String) -> Bool {
-        return false
+    private func idDuplicationCheck(_ id: String,
+                                    completion: @escaping (ValidationResult<IDSuccess, IDError>) -> Void) {
+        Networking.shared.requestValidation(withID: id) { result in
+            switch result {
+            case .failure: completion(.invalid(.networkError))
+            case let .success(response):
+                if response.isValid { completion(.valid(.success)) }
+                else { completion(.invalid(.alreadyExisting)) }
+            }
+        }
     }
 }

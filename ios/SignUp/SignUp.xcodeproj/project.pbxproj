@@ -16,6 +16,10 @@
 		C2338471242F447800B38258 /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338470242F447800B38258 /* Observers.swift */; };
 		C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338472242F457B00B38258 /* NotificationExtension.swift */; };
 		C2338475242F591C00B38258 /* FieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338474242F591C00B38258 /* FieldStackView.swift */; };
+		C2338478242F6C6A00B38258 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338477242F6C6A00B38258 /* Endpoints.swift */; };
+		C233847F242F75DE00B38258 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233847E242F75DE00B38258 /* APIRouter.swift */; };
+		C2338481242F76C200B38258 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338480242F76C200B38258 /* Networking.swift */; };
+		C2338489242F98C400B38258 /* ValidationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338488242F98C400B38258 /* ValidationResponse.swift */; };
 		C2C1D4DA2429BE370062BA4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4D92429BE370062BA4E /* AppDelegate.swift */; };
 		C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */; };
 		C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1D4DD2429BE370062BA4E /* ViewController.swift */; };
@@ -48,6 +52,10 @@
 		C2338470242F447800B38258 /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
 		C2338472242F457B00B38258 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		C2338474242F591C00B38258 /* FieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldStackView.swift; sourceTree = "<group>"; };
+		C2338477242F6C6A00B38258 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		C233847E242F75DE00B38258 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		C2338480242F76C200B38258 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C2338488242F98C400B38258 /* ValidationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResponse.swift; sourceTree = "<group>"; };
 		C2C1D4D62429BE370062BA4E /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C1D4D92429BE370062BA4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,10 +117,21 @@
 		C233846B242C9CDA00B38258 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2338488242F98C400B38258 /* ValidationResponse.swift */,
 				C233846C242C9CF200B38258 /* UserInformation.swift */,
 				C2338470242F447800B38258 /* Observers.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C2338476242F6BC900B38258 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C2338480242F76C200B38258 /* Networking.swift */,
+				C233847E242F75DE00B38258 /* APIRouter.swift */,
+				C2338477242F6C6A00B38258 /* Endpoints.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C2C1D4CD2429BE370062BA4E = {
@@ -142,6 +161,7 @@
 				C2338467242C97E900B38258 /* Controllers */,
 				C2338468242C9BE300B38258 /* ViewModels */,
 				C233846B242C9CDA00B38258 /* Models */,
+				C2338476242F6BC900B38258 /* Networking */,
 				C2C1D4D92429BE370062BA4E /* AppDelegate.swift */,
 				C2C1D4DB2429BE370062BA4E /* SceneDelegate.swift */,
 				C2C1D4DF2429BE370062BA4E /* Main.storyboard */,
@@ -286,10 +306,13 @@
 			files = (
 				C233846A242C9C0200B38258 /* FormViewModel.swift in Sources */,
 				C233846F242CAC8200B38258 /* UpdateEvent.swift in Sources */,
+				C233847F242F75DE00B38258 /* APIRouter.swift in Sources */,
+				C2338481242F76C200B38258 /* Networking.swift in Sources */,
 				C2338460242B2CA800B38258 /* FormButton.swift in Sources */,
 				C2C1D4FD2429F3D60062BA4E /* TextStyle.swift in Sources */,
 				C2338475242F591C00B38258 /* FieldStackView.swift in Sources */,
 				C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */,
+				C2338489242F98C400B38258 /* ValidationResponse.swift in Sources */,
 				C2338462242C895F00B38258 /* IDTextField.swift in Sources */,
 				C233846D242C9CF200B38258 /* UserInformation.swift in Sources */,
 				C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */,
@@ -298,6 +321,7 @@
 				C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */,
 				C2338471242F447800B38258 /* Observers.swift in Sources */,
 				C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */,
+				C2338478242F6C6A00B38258 /* Endpoints.swift in Sources */,
 				C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

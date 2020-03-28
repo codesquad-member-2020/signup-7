@@ -209,7 +209,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqd-Xa-aWN" customClass="FormButton" customModule="SignUp" customModuleProvider="target">
-                                <rect key="frame" x="140.66666666666666" y="507" width="93.666666666666657" height="44"/>
+                                <rect key="frame" x="160.66666666666666" y="507" width="53.666666666666657" height="44"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="caU-jz-Yrm"/>
