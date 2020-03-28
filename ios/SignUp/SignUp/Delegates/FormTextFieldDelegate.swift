@@ -20,7 +20,8 @@ class FormTextFieldDelegate: NSObject {
 
 extension FormTextFieldDelegate: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        formViewModel.validate(string)
+        let text = (textField.text ?? "") as NSString
+        formViewModel.validate(text.replacingCharacters(in: range, with: string))
         return true
     }
 }
