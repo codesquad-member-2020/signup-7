@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Result<T, Error> {
+enum ValidationResult<T, Error> {
     case valid(T)
     case invalid(Error)
 }
@@ -36,7 +36,7 @@ enum IDError: Error {
 }
 
 enum UpdateEvent {
-    case id(result: Result<IDSuccess, IDError>)
+    case id(result: ValidationResult<IDSuccess, IDError>)
     
     func post() {
         switch self {
