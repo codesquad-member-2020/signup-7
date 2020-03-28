@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var idTextField: IDTextField!
+    @IBOutlet weak var idFieldStackView: FieldStackView!
     
     private let formTextFieldDelegate = FormTextFieldDelegate(with: FormViewModel())
     private let observers = Observers()
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idTextField.delegate = formTextFieldDelegate
+        idFieldStackView.formTextField.delegate = formTextFieldDelegate
         
         addViewUpdatingObservers()
     }
@@ -29,8 +29,13 @@ class ViewController: UIViewController {
     
     private func addViewUpdatingObservers() {
         observers.addObserver(forName: UpdateEvent.idValidationResultDidUpdate) { [weak self] in
-            guard let _ = $0 as? UpdateEvent else { return }
-            self?.idTextField.appearance = .invalid
+            guard let idEvent = $0 as? UpdateEvent else { return }
+            if case let .id(result: result) = idEvent {
+                switch result {
+                case .valid: self?.idFieldStackView.appearance = .valid
+                case .invalid(let error): self?.idFieldStackView.appearance = .invalid(message: error.description)
+                }
+            }
         }
     }
 }

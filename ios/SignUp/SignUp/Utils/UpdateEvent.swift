@@ -15,10 +15,12 @@ enum Result<Error> {
 
 enum IDError: Error {
     case invalidRule
+    case alreadyExisting
     
     var description: String {
         switch self {
         case .invalidRule: return "5~20자의 영문 소문자, 숫자와 특수기호(_)(-) 만 사용 가능합니다."
+        case .alreadyExisting: return "이미 사용중인 아이디입니다."
         }
     }
 }

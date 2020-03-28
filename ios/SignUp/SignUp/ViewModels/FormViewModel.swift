@@ -13,6 +13,20 @@ final class FormViewModel {
     private var userInformation: UserInformation?
     
     func validate(_ input: String) {
-        UpdateEvent.id(result: .invalid(.invalidRule)).post()
+        if isNotConformingIDRule(input) {
+            UpdateEvent.id(result: .invalid(.invalidRule)).post()
+        } else if isExistingID(input) {
+            UpdateEvent.id(result: .invalid(.alreadyExisting)).post()
+        } else {
+            UpdateEvent.id(result: .valid).post()
+        }
+    }
+    
+    private func isNotConformingIDRule(_ id: String) -> Bool {
+        return true
+    }
+    
+    private func isExistingID(_ id: String) -> Bool {
+        return true
     }
 }

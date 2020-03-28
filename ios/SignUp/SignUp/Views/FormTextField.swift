@@ -11,12 +11,6 @@ import UIKit
 @IBDesignable
 class FormTextField: UITextField {
     
-    enum Appearance {
-        case normal
-        case focused
-        case invalid
-    }
-    
     @IBInspectable var inset: CGFloat = 0
     
     @IBInspectable var borderColor: UIColor? {
@@ -25,18 +19,6 @@ class FormTextField: UITextField {
 
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet { layer.borderWidth = borderWidth }
-    }
-    
-    var appearance: Appearance = .normal {
-        didSet { setAppearance(to: appearance) }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -49,14 +31,6 @@ class FormTextField: UITextField {
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: UIEdgeInsets(with: inset))
-    }
-    
-    private func setAppearance(to appearance: Appearance) {
-        switch appearance {
-        case .normal: layer.borderColor = UIColor.borderGray.cgColor
-        case .focused: layer.borderColor = UIColor.selectedBlue.cgColor
-        case .invalid: layer.borderColor = UIColor.invalidRed.cgColor
-        }
     }
 }
 
