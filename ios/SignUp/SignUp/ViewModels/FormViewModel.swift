@@ -13,7 +13,7 @@ final class FormViewModel {
     private var userInformation: UserInformation?
     
     func validate(_ input: String) {
-        if isNotConformingIDRule(input) {
+        if !conformsIDRule(input) {
             UpdateEvent.id(result: .invalid(.invalidRule)).post()
             return
         }
@@ -21,8 +21,14 @@ final class FormViewModel {
         idDuplicationCheck(input) { UpdateEvent.id(result: $0).post() }
     }
     
-    private func isNotConformingIDRule(_ id: String) -> Bool {
-        return false
+    private func conformsIDRule(_ id: String) -> Bool {
+        if id.count < 5 || id.count > 20 { return false }
+        
+        let regexPattern = #"[^a-z0-9_-]"#
+        let matches = try! NSRegularExpression(pattern: regexPattern)
+            .matches(in: id, range: NSRange(id.startIndex..., in: id))
+        
+        return matches.count == 0
     }
     
     private func idDuplicationCheck(_ id: String,
