@@ -18,7 +18,7 @@ final class FormViewModel {
         } else if isExistingID(input) {
             UpdateEvent.id(result: .invalid(.alreadyExisting)).post()
         } else {
-            UpdateEvent.id(result: .valid).post()
+            UpdateEvent.id(result: .valid(.success)).post()
         }
     }
     
@@ -27,6 +27,6 @@ final class FormViewModel {
     }
     
     private func isExistingID(_ id: String) -> Bool {
-        return true
+        return false
     }
 }

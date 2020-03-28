@@ -8,9 +8,19 @@
 
 import Foundation
 
-enum Result<Error> {
-    case valid
+enum Result<T, Error> {
+    case valid(T)
     case invalid(Error)
+}
+
+enum IDSuccess {
+    case success
+    
+    var description: String {
+        switch self {
+        case .success: return "사용 가능한 아이디입니다."
+        }
+    }
 }
 
 enum IDError: Error {
@@ -26,7 +36,7 @@ enum IDError: Error {
 }
 
 enum UpdateEvent {
-    case id(result: Result<IDError>)
+    case id(result: Result<IDSuccess, IDError>)
     
     func post() {
         switch self {

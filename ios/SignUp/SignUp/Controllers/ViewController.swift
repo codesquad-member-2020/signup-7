@@ -32,8 +32,8 @@ class ViewController: UIViewController {
             guard let idEvent = $0 as? UpdateEvent else { return }
             if case let .id(result: result) = idEvent {
                 switch result {
-                case .valid: self?.idFieldStackView.appearance = .valid
-                case .invalid(let error): self?.idFieldStackView.appearance = .invalid(message: error.description)
+                case let .valid(message): self?.idFieldStackView.appearance = .valid(message: message.description)
+                case let .invalid(error): self?.idFieldStackView.appearance = .invalid(message: error.description)
                 }
             }
         }

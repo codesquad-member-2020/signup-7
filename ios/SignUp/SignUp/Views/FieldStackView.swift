@@ -15,7 +15,7 @@ class FieldStackView: UIStackView {
     
     enum Appearance {
         case normal
-        case valid
+        case valid(message: String)
         case invalid(message: String)
     }
     
@@ -26,14 +26,20 @@ class FieldStackView: UIStackView {
     private func setAppearance(to appearance: Appearance) {
         switch appearance {
         case .normal: layer.borderColor = UIColor.borderGray.cgColor
-        case .valid: layer.borderColor = UIColor.pointGreen.cgColor
-        case .invalid(let message): setAppearanceInvalid(with: message)
+        case let .valid(message): setAppearanceValid(with: message)
+        case let .invalid(message): setAppearanceInvalid(with: message)
         }
     }
     
     private func setAppearanceInvalid(with message: String) {
         formTextField.layer.borderColor = UIColor.invalidRed.cgColor
         descriptionLabel.textColor = UIColor.invalidRed
+        descriptionLabel.text = message
+    }
+    
+    private func setAppearanceValid(with message: String) {
+        formTextField.layer.borderColor = UIColor.pointGreen.cgColor
+        descriptionLabel.textColor = UIColor.pointGreen
         descriptionLabel.text = message
     }
 }
