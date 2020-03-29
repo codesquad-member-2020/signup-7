@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C2338460242B2CA800B38258 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233845F242B2CA800B38258 /* FormButton.swift */; };
-		C2338462242C895F00B38258 /* IDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338461242C895F00B38258 /* IDTextField.swift */; };
 		C2338466242C8D4400B38258 /* FormTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338465242C8D4400B38258 /* FormTextFieldDelegate.swift */; };
 		C233846A242C9C0200B38258 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338469242C9C0200B38258 /* FormViewModel.swift */; };
 		C233846D242C9CF200B38258 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233846C242C9CF200B38258 /* UserInformation.swift */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		C233845F242B2CA800B38258 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
-		C2338461242C895F00B38258 /* IDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextField.swift; sourceTree = "<group>"; };
 		C2338465242C8D4400B38258 /* FormTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldDelegate.swift; sourceTree = "<group>"; };
 		C2338469242C9C0200B38258 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		C233846C242C9CF200B38258 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			children = (
 				C2C1D503242A4AAC0062BA4E /* FormTextField.swift */,
 				C233845F242B2CA800B38258 /* FormButton.swift */,
-				C2338461242C895F00B38258 /* IDTextField.swift */,
 				C2338474242F591C00B38258 /* FieldStackView.swift */,
 			);
 			path = Views;
@@ -306,7 +303,6 @@
 				C2338475242F591C00B38258 /* FieldStackView.swift in Sources */,
 				C2C1D504242A4AAC0062BA4E /* FormTextField.swift in Sources */,
 				C2338489242F98C400B38258 /* ValidationResponse.swift in Sources */,
-				C2338462242C895F00B38258 /* IDTextField.swift in Sources */,
 				C233846D242C9CF200B38258 /* UserInformation.swift in Sources */,
 				C2C1D4DE2429BE370062BA4E /* ViewController.swift in Sources */,
 				C2338466242C8D4400B38258 /* FormTextFieldDelegate.swift in Sources */,
