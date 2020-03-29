@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIColor {
-    static let black = UIColor(named: "black")!
     static let backgroundGray = UIColor(named: "backgroundGray")!
     static let borderGray = UIColor(named: "borderGray")!
     static let floatingViewBackgroundGray = UIColor(named: "floatingViewBackgroundGray")!
@@ -17,5 +16,4 @@ extension UIColor {
     static let pointGreen = UIColor(named: "pointGreen")!
     static let selectedBlue = UIColor(named: "selectedBlue")!
     static let textGray = UIColor(named: "textGray")!
-    static let white = UIColor(named: "white")!
 }
