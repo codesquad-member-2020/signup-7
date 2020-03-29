@@ -14,7 +14,6 @@
 		C233846D242C9CF200B38258 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233846C242C9CF200B38258 /* UserInformation.swift */; };
 		C233846F242CAC8200B38258 /* UpdateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233846E242CAC8200B38258 /* UpdateEvent.swift */; };
 		C2338471242F447800B38258 /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338470242F447800B38258 /* Observers.swift */; };
-		C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338472242F457B00B38258 /* NotificationExtension.swift */; };
 		C2338475242F591C00B38258 /* FieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338474242F591C00B38258 /* FieldStackView.swift */; };
 		C2338478242F6C6A00B38258 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2338477242F6C6A00B38258 /* Endpoints.swift */; };
 		C233847F242F75DE00B38258 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C233847E242F75DE00B38258 /* APIRouter.swift */; };
@@ -49,7 +48,6 @@
 		C233846C242C9CF200B38258 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		C233846E242CAC8200B38258 /* UpdateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEvent.swift; sourceTree = "<group>"; };
 		C2338470242F447800B38258 /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
-		C2338472242F457B00B38258 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		C2338474242F591C00B38258 /* FieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldStackView.swift; sourceTree = "<group>"; };
 		C2338477242F6C6A00B38258 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C233847E242F75DE00B38258 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 			children = (
 				C2C1D5012429FEEB0062BA4E /* UIColorExtension.swift */,
 				C233846E242CAC8200B38258 /* UpdateEvent.swift */,
-				C2338472242F457B00B38258 /* NotificationExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 				C2C1D4DA2429BE370062BA4E /* AppDelegate.swift in Sources */,
 				C2C1D4DC2429BE370062BA4E /* SceneDelegate.swift in Sources */,
 				C2338471242F447800B38258 /* Observers.swift in Sources */,
-				C2338473242F457B00B38258 /* NotificationExtension.swift in Sources */,
 				C2338478242F6C6A00B38258 /* Endpoints.swift in Sources */,
 				C2C1D5022429FEEB0062BA4E /* UIColorExtension.swift in Sources */,
 			);

@@ -13,7 +13,7 @@ class Observers {
     private let center = NotificationCenter.default
     
     func addObserver(forName name: NSNotification.Name, using block: @escaping (Any?) -> Void) {
-        let observer = center.addObserver(forName: name, using: block)
+        let observer = center.addObserver(forName: name, object: nil, queue: .main) { block($0.object) }
         observers.append(observer)
     }
     
