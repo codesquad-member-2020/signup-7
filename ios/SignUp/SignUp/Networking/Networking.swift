@@ -9,9 +9,7 @@
 import Foundation
 
 class Networking {
-    static let shared = Networking()
-    
-    func requestValidation(withID id: String,
+    static func requestValidation(withID id: String,
                            completion: @escaping (Result<ValidationResponse, Error>) -> Void) {
         guard let url = APIRouter.validateID(id: id).url else { return }
         
@@ -29,6 +27,4 @@ class Networking {
             }
         }.resume()
     }
-    
-    private init() { }
 }

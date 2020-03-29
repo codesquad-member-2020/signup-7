@@ -33,7 +33,7 @@ final class FormViewModel {
     
     private func idDuplicationCheck(_ id: String,
                                     completion: @escaping (ValidationResult<IDSuccess, IDError>) -> Void) {
-        Networking.shared.requestValidation(withID: id) { result in
+        Networking.requestValidation(withID: id) { result in
             switch result {
             case .failure: completion(.invalid(.networkError))
             case let .success(response):
