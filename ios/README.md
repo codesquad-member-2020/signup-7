@@ -11,7 +11,7 @@
 
 **실행 결과**
 
-![signup-7-ios](signup-7-ios.gif)
+![result1](result1.png)
 
 ### 아이디 유효성 검사
 
@@ -23,5 +23,3 @@
 **실행 결과**
 
 ![result2](result2.png)
-
-
